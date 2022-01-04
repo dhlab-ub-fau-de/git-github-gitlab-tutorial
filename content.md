@@ -1,0 +1,402 @@
+# Eine kurze Einführung in Git, GitHub und GitLab
+
+- - - - - - - - - - - - - - - - - - -
+
+Dezentrale Versionierung von Dateien
+
+
+===
+
+
+## Git 
+
+[Git](http://git-scm.com/) ist ein Source Code Management System. Man kann mit ihm
+- Dateiversionen verwalten
+- verteilt arbeiten
+
+>>>
+
+### Git und Source Code Management
+
+Git ist primär zur Verwaltung von Source Code (Programmcode) entwickelt.
+
+Da Programmcode typischerweise in reinen Textdateien (wie .txt) niedergelegt wird,
+sind viele Funktionen von Git darauf ausgelegt.
+
+Daher eignet sich Git besonders zur Verwaltung von Textdateien.
+Es können prinzipiell aber beliebige Dateitypen verwaltet werden.
+
+
+===
+
+## Installation
+
+- [Für Windows](http://gitforwindows.com/) gibt es einen Installer.
+
+- Für Linux oder OSX gibt es entsprechende Paketquellen.
+
+
+===
+
+## Benutzung
+
+Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der Kommandozeile:
+`git <kommando> <parameter>...`
+
+Für Windows (und Linux und OSX) wird eine graphische Oberfläche mitsamt eigener Shell (Bash) angeboten.
+
+
+>>>
+
+## Weitere Graphische Benutzeroberflächen
+
+Neben der hier verwendeten Benutzeroberfläche gibt es diverse weitere.
+
+Auf der Webseite von Git findet sich [eine Auswahl](https://git-scm.com/download/gui/windows).
+
+
+
+===
+
+## Graphische Oberfläche in Windows
+
+<div>
+![Git integriert sich in das Kontextmenü des Windows-Explorers](windows_context_menu2.png)
+</div>
+<!-- .element class="image-on-right" -->
+
+<div>
+Git integriert sich ins Kontextmenü des Explorers.
+- Über "Git GUI Here" wird die graphische Benutzeroberfläche gestartet.
+- Über "Git Bash Here" wird die Shell / Kommandozeile geöffnet.
+</div>
+<!-- .element class="content-on-left" -->
+
+
+===
+
+### Git GUI
+
+![Die graphische Oberfläche Git GUI](git_gui.png)
+
+Über die Menüs der Git GUI sind die gängigsten Befehle verfügbar.
+
+
+>>>
+
+### Git Bash
+
+![Die Kommandozeile Git Bash](git_bash.png)
+
+Git kommt mit einer vollwertigen Kommandozeilenumgebung.
+
+
+
+===
+
+# Verteiltes Arbeiten
+
+Die Stärke von Git ist das einfache verteilte Arbeiten an gemeinsam genutzten Dateien.
+
+
+===
+
+## Git und Github
+
+Git ist das Werkzeug.
+
+[GitHub](https://github.com/), [GitLab](https://gitlab.com), [Bitbucket](https://bitbucket.org/), u.a. sind Plattformen, die Zusatzdienstleistungen rund um Git anbieten:
+- Repositorys hosten
+- web-basierte graphische Oberflächen
+- Werkzeuge für das soziale Versionsmanagement
+
+
+===
+
+## Repositories abgleichen
+
+Repositories an verschiedenen Orten können miteinander abgeglichen werden.
+
+Git kennt dabei prinzipiell keine Hierarchie zwischen Repositories. Folgender Aufbau ist gerade für kollaboratives Arbeiten sinnvoll:
+
+- Zentrales, über das Netz erreichbares Repository auf einem Server.
+- Lokale Arbeitskopien des Repositories.
+
+
+===
+
+## Eine lokale Arbeitskopie erzeugen
+
+Das Erzeugen einer Kopie nennt man *klonen*.
+
+Da Git Arbeitskopien ermuntert, ist klonen sehr einfach.
+
+Man braucht dazu die URL des zentralen Repositorys.
+
+
+>>>
+
+### Die URL des zentralen Repository
+
+![Beispiel, wo man die URL eines Repository findet](gitlab_git_tutorial_repo.png)
+
+
+===
+
+### Einen Klon erzeugen (GUI)
+
+<div>
+![Klonen eines Repository in der GUI](git_gui_create_repo1.png)
+![Angabe des zu klonenden Repository](git_gui_clone_repo.png)
+</div>
+<!-- .element class="image-on-right" -->
+
+<div>
+Im Explorer außerhalb eines Repositorys die Git GUI aufrufen.
+
+Wenn `Clone Existing Repository` ausgewählt wird, erscheint ein Dialog zur Eingabe der Repository-URL.
+</div>
+<!-- .element class="content-on-left" -->
+
+
+===
+
+## Vor dem Arbeiten: Konfiguration
+
+Git will mindestens Name und Mail-Adresse kennen, die es als Provenienzangaben benutzt.
+
+===
+
+## Konfiguration (GUI)
+
+<div>
+![Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen](git_gui_settings.png)
+</div>
+<!-- .element class="image-on-right" -->
+
+<div>
+Unter `Edit > Options` finden sich die Einstellungen.
+
+Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen.
+</div>
+<!-- .element class="content-on-left" -->
+
+
+>>> 
+
+## Konfiguration (Bash)
+
+`git config --global user.name <Name>` setzt den Namen.
+
+`git config --global user.email <Mail>` setzt die Mail-Adresse.
+
+Für Repository-bezogene Einstellungen lässt man `--global`weg.
+
+
+===
+
+## Versionsverwaltung von Dateien
+
+- Die oberste Gliederungseinheit in Git ist ein Repository.
+- Ein Repository ist ein (normales) Verzeichnis.
+- Dateien und Verzeichnisse in einem Repository werden gemeinsam verwaltet.
+
+===
+
+## Ein Repository anlegen
+
+
+- Man kann entweder ein neues Verzeichnis als Repository erstellen oder ein bestehendes umwandeln.
+- Im Repository legt Git ein Verzeichnis `.git` an, in dem es die Verwaltungsdaten ablegt. Dieses Verzeichnis sollte **nicht** verändert werden!
+
+
+===
+
+### Ein Repository anlegen (GUI)
+
+<div>
+![Ein neues Repository kann über die Aktion "Create New Repository" erzeugt werden](git_gui_create_repo1.png)
+![Das Verzeichnis, in dem das Repository erzeugt werden soll, musss explizit angegeben werden](git_gui_create_repo2.png)
+</div>
+<!-- .element class="image-on-right" -->
+
+Beim Starten der GUI in einem Verzeichnis, das kein Repository ist, kann ein neues Repo erzeugt werden.
+
+Das Verzeichnis muss angegeben werden. Im Auswahldialog einfach "Ordner auswählen" drücken.
+
+
+>>>
+
+### Ein Repository anlegen (Bash)
+
+In das entprechende Verzeichnis wechseln und mit 
+
+`git init` ein Repository anlegen.
+
+
+===
+
+## Alternative: Ein Repository clonen
+
+
+
+
+
+===
+
+## Versionen erstellen und verwalten
+
+Ein *Commit*...
+- ist ein Schnappschuss eines Repositorys zu einem bestimmten Zeitpunkt,
+- erstellt und sichert die Version und Zustand der Dateien und Verzeichnisse,
+- hat eine Log-Meldung,
+- hat einen oder mehrere chronologische Vorläufer und
+- ist durch einen Hashwert eindeutig identifiziert.
+
+
+===
+
+### Staging: Vorbereiten eines Commits
+
+- Git nimmt in ein Commit nur explizit genannte Dateien auf.
+- Mit dem Staging sagt man Git, dass es eine Datei für das nächste Commit vormerken soll.
+
+
+===
+
+### Staging und Commit (GUI)
+
+<div>
+![Die für ein Commit wichtigen Elemente](git_gui_commit.png)
+</div>
+<!-- .element class="image-on-right" style="width: 50%;" -->
+ 
+Die Listen rechts zeigen an, welche Dateien geändert wurden und welche davon vorgemerkt sind (rot und grün).
+
+Über `Stage changed` können alle geänderten Dateien vorgemerkt werden.
+
+Vor dem `Commit` muss eine Commit Message eingegeben werden (blau).
+
+>>>
+
+### Staging und Commit (Bash)
+
+`git add <Datei oder Verzeichnis>` merkt Dateien oder komplette Verzeichnisse vor.
+`git add .` merkt alle Änderungen im aktuellen Verzeichnis und in Unterverzeichnissen vor.
+
+`git commit` erstellt ein Commit. In einem Editor muss man eine Commit-Meldung erstellen.
+Alternativ kann die Option `-m <Meldung>` benutzt werden.
+
+
+===
+
+## Versionshistorie
+
+Man kann in Git...
+- sich die Versionshistorie mit Meldungen und Änderungen anzeigen lassen und
+- eine bestimmte Version *auschecken*, das heißt, das Repository auf diesen Commit zurücksetzen.
+
+Es gibt für Git verschiedenste Werkzeuge und Wege dafür.
+
+
+===
+
+### Versionshistorie anschauen (GUI)
+
+<div>
+![Das Fenster zur Ansicht der Versionshistorie mit vielen Einstellmöglichkeiten](git_gui_view_logs.png)
+</div>
+<!-- .element class="image-on-right" -->
+
+Über `Repository > Visualize master's History` ist die Historie anzeigbar.
+
+Es gibt zahlreiche Einstellmöglichkeiten. Einfach ausprobieren, was nützt!
+
+
+>>>
+
+### Versionshistorie anschauen (Bash)
+
+`git log` zeigt eine Liste der letzten Commits mit Meldungen.
+
+`git diff` zeigt zeilenweise die Änderungen seit dem letzten Commit. 
+
+`git diff A..B [<Datei>]` zeigt die Änderungen zwischen Commit A und Commit B.
+
+`git diff A..HEAD` zeigt Änderungen zwischen A und dem letzten Commit.
+
+
+===
+
+### Version auschecken (GUI)
+
+Unter `Branch > Checkout...` kann ein beliebiger Commit ausgewählt werden.
+
+
+>>>
+
+### Version auschecken (Bash)
+
+`git checkout <Commit-Hash>` checkt die angegebene Version aus.
+
+
+===
+
+## Varianten und Zweige
+
+Beziehungen zwischen Commits können nicht nur chronologische *Änderungen* darstellen, sondern auch
+  inhaltliche *Varianten*.
+
+
+
+===
+
+## Zweige
+
+
+<div>
+![Ein Netzwerk von Zweigen](github_kitodo_commit_graph.png)
+<span class="small">https://github.com/kitodo/kitodo-production/network</span>
+</div>
+<!-- .element class="image-on-right" -->
+
+<div>
+Varianten werden durch Zweige, sogenannte *Branches*, realisiert.
+
+Zweige können abgespalten und wieder zusammengeführt werden.
+
+Dadurch entsteht eine graphartige Struktur.
+</div>
+<!-- .element class="content-on-left" -->
+
+
+>>>
+
+### Einen Zweig erstellen (GUI)
+
+`Branch > Create...` erstellt einen neuen Zweig. Dieser muss und sollte einen sprechenden Namen bekommen.
+
+Git benennt den Hauptzweig standardmäßig `master`.
+
+
+>>>
+
+### Einen Zweig erstellen (Bash)
+
+`git branch <Branch-Name>` erzeugt einen neuen Branch.
+
+
+
+
+
+===
+
+# Weiterführendes Material
+
+[Tutorials, Videos, Bücher der Git-Webseite](https://git-scm.com/book/en/v2)
+
+[Tutorials auf GitHub](http://try.github.io/)
+
+Jede Menge Videos und Tutorials im Netz
+
+
