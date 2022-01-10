@@ -2,63 +2,108 @@
 
 - - - - - - - - - - - - - - - - - - -
 
-Dezentrale Versionierung von Dateien
-
-
-===
 
 
 ## Git 
 
-[Git](http://git-scm.com/) ist ein Source Code Management System. Man kann mit ihm
-- Dateiversionen verwalten
-- verteilt arbeiten
+[Git](http://git-scm.com/) ist ein Source Code Management System. 
+- Repository: zusammen verwaltete Dateien und Verzeichnisse
+- Dateienversionen verwalten
+  - Snapshots
+  - Alternativen
+  - Diffs (Änderungen sichtbar machen)
+- Dezentral verteiltes arbeiten
 
->>>
-
-### Git und Source Code Management
-
-Git ist primär zur Verwaltung von Source Code (Programmcode) entwickelt.
-
-Da Programmcode typischerweise in reinen Textdateien (wie .txt) niedergelegt wird,
-sind viele Funktionen von Git darauf ausgelegt.
-
-Daher eignet sich Git besonders zur Verwaltung von Textdateien.
-Es können prinzipiell aber beliebige Dateitypen verwaltet werden.
+==> Optimiert für Programmcode / *Textdateien* (txt, csv, xml, html, tex, ...)
 
 
-===
 
-## Installation
+## Git und GitHub|GitLab
+
+Git ist das Werkzeug.
+
+[GitHub](https://github.com/), [GitLab](https://gitlab.com), [Bitbucket](https://bitbucket.org/), u.a. sind Plattformen, die Dienstleistungen rund um Git anbieten:
+- Hosting von und Zugriff auf Dateien mittels Git
+- Projektverwaltung
+- Werkzeuge zur Kollaboration
+- web-basierte graphische Oberfläche
+- Präsentation / Werbung / Sichtbarkeit
+
+
+
+## GitHub
+
+GitHub ist ein kostenlos nutzbares, jedoch kommerzielles Angebot von Microsoft.
+
+- Die bekannteste und populärste Plattform
+- Kostenlose öffentliche und private Repositories
+
+
+
+## GitLab
+
+
+GitLab ist eine (ebenfalls kommezielle) Alternative zu GitHub. 
+Der Quellcode ist im Gegensatz zu GitHub aber *Open Source*.
+Daher wird es zum Aufsetzen eigener GitHub-Alternativen verwendet.
+
+Das RRZE betreibt GitLab für alle FAU-Angehörigen in [zwei Varianten](https://www.rrze.fau.de/serverdienste/infrastruktur/gitlab/).
+- Unterschiede in den Lizenzbestimmungen und Features.
+- [Übersicht](https://about.gitlab.com/pricing/gitlab-com/feature-comparison/) über die Features.
+- Im Zweifel gitos verwenden. (Der Funktionsumfang sollte meist reichen.)
+
+
+
+## Warum GitHub|GitLab verwenden?
+
+- Hosting, Sicherung 
+- Arbeitsplatzunabhängiges Arbeiten
+- Teilen / Veröffentlichen
+- Kollaborativ arbeiten
+- Pages: Eigene kleine Webseiten hosten ([GitHub](https://pages.github.com/)|[GitLab](https://docs.gitlab.com/ee/user/project/pages/))
+- Issue System und Wiki
+- CD/CI: Automatisch Aufgaben ausführen ([GitHub]()|[GitLab]())
+
+
+
+## Links
+
+- https://github.com/dhlab-ub-fau-de/git-github-gitlab-tutorial
+- [Einführung auf StudOn](https://www.studon.fau.de/pg571251_2993840.html)
+- [An Introduction to Version Control Using GitHub Desktop](https://programminghistorian.org/en/lessons/retired/getting-started-with-github-desktop)
+- [Version Control with Git](https://swcarpentry.github.io/git-novice/)
+- [Tutorials, Videos, Bücher der Git-Webseite](https://git-scm.com/book/en/v2)
+- [Tutorials auf GitHub](http://try.github.io/)
+- https://www.youtube.com/watch?v=0Im_FrvLxXo
+
+
+
+## Git installieren
 
 - [Für Windows](http://gitforwindows.com/) gibt es einen Installer.
 
 - Für Linux oder OSX gibt es entsprechende Paketquellen.
 
 
-===
 
 ## Benutzung
 
 Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der Kommandozeile:
-`git <kommando> <parameter>...`
 
-Für Windows (und Linux und OSX) wird eine graphische Oberfläche mitsamt eigener Shell (Bash) angeboten.
-
-
->>>
-
-## Weitere Graphische Benutzeroberflächen
-
-Neben der hier verwendeten Benutzeroberfläche gibt es diverse weitere.
-
-Auf der Webseite von Git findet sich [eine Auswahl](https://git-scm.com/download/gui/windows).
+```git <kommando> <parameter>...```
 
 
 
-===
+## Graphische Benutzeroberflächen
 
-## Graphische Oberfläche in Windows
+
+- Es gibt zahlreiche graphische Benutzeroberflächen.
+- Auf der Webseite von Git findet sich [eine Auswahl](https://git-scm.com/download/gui/windows).
+- Git für Windows kommt mit einer rudimentären GUI. 
+
+
+
+## Git GUI in Windows
 
 <div>
 ![Git integriert sich in das Kontextmenü des Windows-Explorers](windows_context_menu2.png)
@@ -73,7 +118,6 @@ Git integriert sich ins Kontextmenü des Explorers.
 <!-- .element class="content-on-left" -->
 
 
-===
 
 ### Git GUI
 
@@ -82,7 +126,6 @@ Git integriert sich ins Kontextmenü des Explorers.
 Über die Menüs der Git GUI sind die gängigsten Befehle verfügbar.
 
 
->>>
 
 ### Git Bash
 
@@ -92,38 +135,25 @@ Git kommt mit einer vollwertigen Kommandozeilenumgebung.
 
 
 
-===
-
 # Verteiltes Arbeiten
 
 Die Stärke von Git ist das einfache verteilte Arbeiten an gemeinsam genutzten Dateien.
 
+Dazu wird das Repository an verschiedenen Orten vorgehalten (local und remote).
 
-===
-
-## Git und Github
-
-Git ist das Werkzeug.
-
-[GitHub](https://github.com/), [GitLab](https://gitlab.com), [Bitbucket](https://bitbucket.org/), u.a. sind Plattformen, die Zusatzdienstleistungen rund um Git anbieten:
-- Repositorys hosten
-- web-basierte graphische Oberflächen
-- Werkzeuge für das soziale Versionsmanagement
+Git managed die Synchronisation der Repositorykopien.
 
 
-===
 
-## Repositories abgleichen
+## Verteilte Repositories
 
-Repositories an verschiedenen Orten können miteinander abgeglichen werden.
 
-Git kennt dabei prinzipiell keine Hierarchie zwischen Repositories. Folgender Aufbau ist gerade für kollaboratives Arbeiten sinnvoll:
+Git kennt prinzipiell keine Hierarchie zwischen Repositories. In der Praxis hat sich folgender Aufbau bewährt:
 
-- Zentrales, über das Netz erreichbares Repository auf einem Server.
+- Zentrales Haupt-Repository auf einem Server (GitHub, GitLab, ...).
 - Lokale Arbeitskopien des Repositories.
 
 
-===
 
 ## Eine lokale Arbeitskopie erzeugen
 
@@ -134,14 +164,12 @@ Da Git Arbeitskopien ermuntert, ist klonen sehr einfach.
 Man braucht dazu die URL des zentralen Repositorys.
 
 
->>>
 
 ### Die URL des zentralen Repository
 
 ![Beispiel, wo man die URL eines Repository findet](gitlab_git_tutorial_repo.png)
 
 
-===
 
 ### Einen Klon erzeugen (GUI)
 
@@ -159,13 +187,11 @@ Wenn `Clone Existing Repository` ausgewählt wird, erscheint ein Dialog zur Eing
 <!-- .element class="content-on-left" -->
 
 
-===
 
 ## Vor dem Arbeiten: Konfiguration
 
 Git will mindestens Name und Mail-Adresse kennen, die es als Provenienzangaben benutzt.
 
-===
 
 ## Konfiguration (GUI)
 
@@ -182,7 +208,6 @@ Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen.
 <!-- .element class="content-on-left" -->
 
 
->>> 
 
 ## Konfiguration (Bash)
 
@@ -193,7 +218,6 @@ Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen.
 Für Repository-bezogene Einstellungen lässt man `--global`weg.
 
 
-===
 
 ## Versionsverwaltung von Dateien
 
@@ -201,7 +225,6 @@ Für Repository-bezogene Einstellungen lässt man `--global`weg.
 - Ein Repository ist ein (normales) Verzeichnis.
 - Dateien und Verzeichnisse in einem Repository werden gemeinsam verwaltet.
 
-===
 
 ## Ein Repository anlegen
 
@@ -210,7 +233,6 @@ Für Repository-bezogene Einstellungen lässt man `--global`weg.
 - Im Repository legt Git ein Verzeichnis `.git` an, in dem es die Verwaltungsdaten ablegt. Dieses Verzeichnis sollte **nicht** verändert werden!
 
 
-===
 
 ### Ein Repository anlegen (GUI)
 
@@ -225,7 +247,6 @@ Beim Starten der GUI in einem Verzeichnis, das kein Repository ist, kann ein neu
 Das Verzeichnis muss angegeben werden. Im Auswahldialog einfach "Ordner auswählen" drücken.
 
 
->>>
 
 ### Ein Repository anlegen (Bash)
 
@@ -234,15 +255,6 @@ In das entprechende Verzeichnis wechseln und mit
 `git init` ein Repository anlegen.
 
 
-===
-
-## Alternative: Ein Repository clonen
-
-
-
-
-
-===
 
 ## Versionen erstellen und verwalten
 
@@ -254,7 +266,6 @@ Ein *Commit*...
 - ist durch einen Hashwert eindeutig identifiziert.
 
 
-===
 
 ### Staging: Vorbereiten eines Commits
 
@@ -262,7 +273,6 @@ Ein *Commit*...
 - Mit dem Staging sagt man Git, dass es eine Datei für das nächste Commit vormerken soll.
 
 
-===
 
 ### Staging und Commit (GUI)
 
@@ -277,7 +287,7 @@ Die Listen rechts zeigen an, welche Dateien geändert wurden und welche davon vo
 
 Vor dem `Commit` muss eine Commit Message eingegeben werden (blau).
 
->>>
+
 
 ### Staging und Commit (Bash)
 
@@ -288,7 +298,6 @@ Vor dem `Commit` muss eine Commit Message eingegeben werden (blau).
 Alternativ kann die Option `-m <Meldung>` benutzt werden.
 
 
-===
 
 ## Versionshistorie
 
@@ -299,7 +308,6 @@ Man kann in Git...
 Es gibt für Git verschiedenste Werkzeuge und Wege dafür.
 
 
-===
 
 ### Versionshistorie anschauen (GUI)
 
@@ -313,7 +321,6 @@ Es gibt für Git verschiedenste Werkzeuge und Wege dafür.
 Es gibt zahlreiche Einstellmöglichkeiten. Einfach ausprobieren, was nützt!
 
 
->>>
 
 ### Versionshistorie anschauen (Bash)
 
@@ -326,21 +333,18 @@ Es gibt zahlreiche Einstellmöglichkeiten. Einfach ausprobieren, was nützt!
 `git diff A..HEAD` zeigt Änderungen zwischen A und dem letzten Commit.
 
 
-===
 
 ### Version auschecken (GUI)
 
 Unter `Branch > Checkout...` kann ein beliebiger Commit ausgewählt werden.
 
 
->>>
 
 ### Version auschecken (Bash)
 
 `git checkout <Commit-Hash>` checkt die angegebene Version aus.
 
 
-===
 
 ## Varianten und Zweige
 
@@ -349,7 +353,6 @@ Beziehungen zwischen Commits können nicht nur chronologische *Änderungen* dars
 
 
 
-===
 
 ## Zweige
 
@@ -370,7 +373,6 @@ Dadurch entsteht eine graphartige Struktur.
 <!-- .element class="content-on-left" -->
 
 
->>>
 
 ### Einen Zweig erstellen (GUI)
 
@@ -379,24 +381,11 @@ Dadurch entsteht eine graphartige Struktur.
 Git benennt den Hauptzweig standardmäßig `master`.
 
 
->>>
 
 ### Einen Zweig erstellen (Bash)
 
 `git branch <Branch-Name>` erzeugt einen neuen Branch.
 
 
-
-
-
-===
-
-# Weiterführendes Material
-
-[Tutorials, Videos, Bücher der Git-Webseite](https://git-scm.com/book/en/v2)
-
-[Tutorials auf GitHub](http://try.github.io/)
-
-Jede Menge Videos und Tutorials im Netz
 
 
