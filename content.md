@@ -43,11 +43,12 @@ GitHub ist ein kostenlos nutzbares, jedoch kommerzielles Angebot von Microsoft.
 ## GitLab
 
 
-GitLab ist eine (ebenfalls kommezielle) Alternative zu GitHub. 
+GitLab ist eine (ebenfalls kommerzielle) Alternative zu GitHub. 
 Der Quellcode ist im Gegensatz zu GitHub aber *Open Source*.
 Daher wird es zum Aufsetzen eigener GitHub-Alternativen verwendet.
 
 Das RRZE betreibt GitLab für alle FAU-Angehörigen in [zwei Varianten](https://www.rrze.fau.de/serverdienste/infrastruktur/gitlab/).
+- Zuvor müssen Sie sich in IDM für GitLab freischalten lassen.
 - Unterschiede in den Lizenzbestimmungen und Features.
 - [Übersicht](https://about.gitlab.com/pricing/gitlab-com/feature-comparison/) über die Features.
 - Im Zweifel gitos verwenden. (Der Funktionsumfang sollte meist reichen.)
