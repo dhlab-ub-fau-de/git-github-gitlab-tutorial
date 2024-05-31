@@ -20,7 +20,7 @@
 
 ## Git und GitHub|GitLab
 
-Git ist das Werkzeug.
+Git ist das grundlegende Werkzeug.
 
 [GitHub](https://github.com/), [GitLab](https://gitlab.com), [Bitbucket](https://bitbucket.org/), u.a. sind Plattformen, die Dienstleistungen rund um Git anbieten:
 - Hosting von und Zugriff auf Dateien mittels Git
@@ -42,15 +42,13 @@ GitHub ist ein kostenlos nutzbares, jedoch kommerzielles Angebot von Microsoft.
 
 ## GitLab
 
-
-GitLab ist eine (ebenfalls kommezielle) Alternative zu GitHub. 
+GitLab ist eine (ebenfalls kommerzielle) Alternative zu GitHub. 
 Der Quellcode ist im Gegensatz zu GitHub aber *Open Source*.
 Daher wird es zum Aufsetzen eigener GitHub-Alternativen verwendet.
 
 Das RRZE betreibt GitLab für alle FAU-Angehörigen in [zwei Varianten](https://www.rrze.fau.de/serverdienste/infrastruktur/gitlab/).
-- Unterschiede in den Lizenzbestimmungen und Features.
-- [Übersicht](https://about.gitlab.com/pricing/gitlab-com/feature-comparison/) über die Features.
-- Im Zweifel gitos verwenden. (Der Funktionsumfang sollte meist reichen.)
+- Auf Gitos Anmeldung für Nicht-FAU-Angehörige möglich.
+- Im Zweifel gitos verwenden.
 
 
 
@@ -61,8 +59,9 @@ Das RRZE betreibt GitLab für alle FAU-Angehörigen in [zwei Varianten](https://
 - Teilen / Veröffentlichen
 - Kollaborativ arbeiten
 - Pages: Eigene kleine Webseiten hosten ([GitHub](https://pages.github.com/)|[GitLab](https://docs.gitlab.com/ee/user/project/pages/))
-- Issue System und Wiki
+- Issue/Ticket-System und Wiki
 - CD/CI: Automatisch Aufgaben ausführen ([GitHub]()|[GitLab]())
+- Graphische Web-Editoren
 
 
 
@@ -96,10 +95,10 @@ Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der 
 
 ## Graphische Benutzeroberflächen
 
-
 - Es gibt zahlreiche graphische Benutzeroberflächen.
 - Auf der Webseite von Git findet sich [eine Auswahl](https://git-scm.com/download/gui/windows).
-- Git für Windows kommt mit einer rudimentären GUI. 
+- Git für Windows kommt mit einer rudimentären GUI.
+- [TortoiseGit](https://tortoisegit.org/) bedient man über das Kontextmenü des Windows-Explorers
 
 
 
@@ -107,35 +106,20 @@ Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der 
 
 <div>
 ![Git integriert sich in das Kontextmenü des Windows-Explorers](windows_context_menu2.png)
+![Die Kommandozeile Git Bash](git_bash.png)
 </div>
 <!-- .element class="image-on-left" -->
 
 <div>
-Git integriert sich ins Kontextmenü des Explorers.
-- Über "Git GUI Here" wird die graphische Benutzeroberfläche gestartet.
-- Über "Git Bash Here" wird die Shell / Kommandozeile geöffnet.
+Git kommt mit einer vollwertigen Kommandozeilenumgebung.
+
+Über die Menüs der Git GUI sind die gängigsten Befehle verfügbar.
 </div>
 <!-- .element class="content-on-right" -->
 
 
 
-### Git GUI
-
-![Die graphische Oberfläche Git GUI](git_gui.png)
-
-Über die Menüs der Git GUI sind die gängigsten Befehle verfügbar.
-
-
-
-### Git Bash
-
-![Die Kommandozeile Git Bash](git_bash.png)
-
-Git kommt mit einer vollwertigen Kommandozeilenumgebung.
-
-
-
-# Verteiltes Arbeiten
+## Verteiltes Arbeiten
 
 Die Stärke von Git ist das einfache verteilte Arbeiten an gemeinsam genutzten Dateien.
 
@@ -146,7 +130,6 @@ Git managed die Synchronisation der Repositorykopien.
 
 
 ## Verteilte Repositories
-
 
 Git kennt prinzipiell keine Hierarchie zwischen Repositories. In der Praxis hat sich folgender Aufbau bewährt:
 
@@ -193,6 +176,7 @@ Wenn `Clone Existing Repository` ausgewählt wird, erscheint ein Dialog zur Eing
 Git will mindestens Name und Mail-Adresse kennen, die es als Provenienzangaben benutzt.
 
 
+
 ## Konfiguration (GUI)
 
 <div>
@@ -227,7 +211,6 @@ Für Repository-bezogene Einstellungen lässt man `--global`weg.
 
 
 ## Ein Repository anlegen
-
 
 - Man kann entweder ein neues Verzeichnis als Repository erstellen oder ein bestehendes umwandeln.
 - Im Repository legt Git ein Verzeichnis `.git` an, in dem es die Verwaltungsdaten ablegt. Dieses Verzeichnis sollte **nicht** verändert werden!
@@ -353,9 +336,7 @@ Beziehungen zwischen Commits können nicht nur chronologische *Änderungen* dars
 
 
 
-
 ## Zweige
-
 
 <div>
 ![Ein Netzwerk von Zweigen](github_kitodo_commit_graph.png)
@@ -378,7 +359,7 @@ Dadurch entsteht eine graphartige Struktur.
 
 `Branch > Create...` erstellt einen neuen Zweig. Dieser muss und sollte einen sprechenden Namen bekommen.
 
-Git benennt den Hauptzweig standardmäßig `master`.
+Git benennt den Hauptzweig standardmäßig `main`.
 
 
 
