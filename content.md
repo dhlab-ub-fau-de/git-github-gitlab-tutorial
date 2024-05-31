@@ -108,14 +108,14 @@ Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der 
 <div>
 ![Git integriert sich in das Kontextmenü des Windows-Explorers](windows_context_menu2.png)
 </div>
-<!-- .element class="image-on-right" -->
+<!-- .element class="image-on-left" -->
 
 <div>
 Git integriert sich ins Kontextmenü des Explorers.
 - Über "Git GUI Here" wird die graphische Benutzeroberfläche gestartet.
 - Über "Git Bash Here" wird die Shell / Kommandozeile geöffnet.
 </div>
-<!-- .element class="content-on-left" -->
+<!-- .element class="content-on-right" -->
 
 
 
