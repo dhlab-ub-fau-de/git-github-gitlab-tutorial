@@ -42,7 +42,7 @@ GitHub ist ein kostenlos nutzbares, jedoch kommerzielles Angebot von Microsoft.
 
 ## GitLab
 
-GitLab ist eine (ebenfalls kommezielle) Alternative zu GitHub. 
+GitLab ist eine (ebenfalls kommerzielle) Alternative zu GitHub. 
 Der Quellcode ist im Gegensatz zu GitHub aber *Open Source*.
 Daher wird es zum Aufsetzen eigener GitHub-Alternativen verwendet.
 
