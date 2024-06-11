@@ -9,15 +9,13 @@ https://github.com/mnscholz/git-github-gitlab-tutorial
 
 ## Typische Probleme 
 
-<div>
-Dateiversionierung
+- Dateiversionierung
+- Nachvollziehbarkeit von Änderungen
+
 ![inkonsistent benannte Dateien mit verschiedenen Versionen eines Dokuments](dateichaos.png)
 <!-- .element class="image-on-left" -->
 
-<div>
-Nachvollziehbarkeit von Änderungen
 ![loser Verweis aus einem Kommentar in einem Textdokument](kommentar_verweis.png)
-</div>
 
 
 
