@@ -1,93 +1,109 @@
-# Eine kurze Einführung in Git, GitHub und GitLab
+<!-- .element class="aligned-center title-page" -->
+# Versionsverwaltung und <br/> Kollaboratives Arbeiten <br/> mit Git, GitHub und GitLab
 
 - - - - - - - - - - - - - - - - - - -
+
+https://github.com/mnscholz/git-github-gitlab-tutorial
+
+
+
+## Typische Probleme 
+
+<div>
+Dateiversionierung
+![inkonsistent benannte Dateien mit verschiedenen Versionen eines Dokuments](dateichaos.png)
+<!-- .element class="image-on-left" -->
+
+<div>
+Nachvollziehbarkeit von Änderungen
+![loser Verweis aus einem Kommentar in einem Textdokument](kommentar_verweis.png)
+</div>
 
 
 
 ## Git 
 
-[Git](http://git-scm.com/) ist ein Source Code Management System. 
+[Git](http://git-scm.com/) ist das aktuell meist genutzte Source Code Management System <br/>
+unter anderem für Entwicklung von Linux, Windows, ...
+
 - Repository: zusammen verwaltete Dateien und Verzeichnisse
-- Dateienversionen verwalten
+- Dateiversionen verwalten
   - Snapshots
   - Alternativen
   - Diffs (Änderungen sichtbar machen)
-- Dezentral verteiltes arbeiten
+- Dezentral verteiltes Arbeiten
 
-==> Optimiert für Programmcode / *Textdateien* (txt, csv, xml, html, tex, ...)
+⚠ Optimiert für Programmcode / *Textdateien* (txt, csv, xml, html, tex, ...)
 
 
 
 ## Git und GitHub|GitLab
 
-Git ist das grundlegende Werkzeug.
+Git ist das basale Werkzeug.
 
-[GitHub](https://github.com/), [GitLab](https://gitlab.com), [Bitbucket](https://bitbucket.org/), u.a. sind Plattformen, die Dienstleistungen rund um Git anbieten:
-- Hosting von und Zugriff auf Dateien mittels Git
+[GitHub](https://github.com/), [GitLab](https://gitlab.com), u.a. sind darauf aufbauende Plattformen.
+- Ablage von und Zugriff auf Dateien mittels Git und Browser
 - Projektverwaltung
 - Werkzeuge zur Kollaboration
 - web-basierte graphische Oberfläche
-- Präsentation / Werbung / Sichtbarkeit
+- Präsentation / Sichtbarkeit / (Archivierung)
+
+😎 Nur rudimentäre Git-Kenntnisse nötig!
 
 
 
 ## GitHub
 
-GitHub ist ein kostenlos nutzbares, jedoch kommerzielles Angebot von Microsoft.
+[GitHub](https://github.com) ist ein kommerzielles Angebot von Microsoft.
 
 - Die bekannteste und populärste Plattform
 - Kostenlose öffentliche und private Repositories
+- Verlangt 2FA zum Anmelden und Schlüssel / Tokens zum Synchronisieren
 
 
 
 ## GitLab
 
-GitLab ist eine (ebenfalls kommerzielle) Alternative zu GitHub. 
-Der Quellcode ist im Gegensatz zu GitHub aber *Open Source*.
-Daher wird es zum Aufsetzen eigener GitHub-Alternativen verwendet.
+GitLab ist eine ebenfalls kommerzielle Alternative zu GitHub.<br/>
+Das betreiben eigener Instanzen ist möglich.
 
 Das RRZE betreibt GitLab für alle FAU-Angehörigen in [zwei Varianten](https://www.rrze.fau.de/serverdienste/infrastruktur/gitlab/).
-- Auf Gitos Anmeldung für Nicht-FAU-Angehörige möglich.
-- Im Zweifel gitos verwenden.
+- Variante Gitos erlaubt die Anmeldung auch für Nicht-FAU-Angehörige
+- Für Nutzung von Gitlab muss man sich im IDM freischalten
 
 
 
 ## Warum GitHub|GitLab verwenden?
 
+- Arbeitsplatzunabhängige Dateiablage
+- Versionskontrolle
 - Hosting, Sicherung 
-- Arbeitsplatzunabhängiges Arbeiten
-- Teilen / Veröffentlichen
 - Kollaborativ arbeiten
-- Pages: Eigene kleine Webseiten hosten ([GitHub](https://pages.github.com/)|[GitLab](https://docs.gitlab.com/ee/user/project/pages/))
-- Issue/Ticket-System und Wiki
-- CD/CI: Automatisch Aufgaben ausführen ([GitHub]()|[GitLab]())
+- Wiki und Issue/Ticket-System
 - Graphische Web-Editoren
+- Pages: Eigene statische Webseiten hosten 
+- CD/CI: Automatisch Aufgaben ausführen
 
 
 
-## Links
+## Wann ist GitHub|GitLab eher nicht geeignet?
 
-- https://github.com/dhlab-ub-fau-de/git-github-gitlab-tutorial
-- [Einführung auf StudOn](https://www.studon.fau.de/pg571251_2993840.html)
-- [An Introduction to Version Control Using GitHub Desktop](https://programminghistorian.org/en/lessons/retired/getting-started-with-github-desktop)
-- [Version Control with Git](https://swcarpentry.github.io/git-novice/)
-- [Tutorials, Videos, Bücher der Git-Webseite](https://git-scm.com/book/en/v2)
-- [Tutorials auf GitHub](http://try.github.io/)
-- https://www.youtube.com/watch?v=0Im_FrvLxXo
+- reine Dateiablage á la FAUbox, Dropbox, ...
+- (Große) Binärdateien
+- Gleichzeitiges gemeinsames Editieren eines einzelnen Dokuments á la Google Docs
 
 
 
 ## Git installieren
 
-- [Für Windows](http://gitforwindows.com/) gibt es einen Installer.
-
+- Für Windows gibt es einen [Installer](http://gitforwindows.com/).
 - Für Linux oder OSX gibt es entsprechende Paketquellen.
 
 
 
 ## Benutzung
 
-Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der Kommandozeile:
+Git selbst bedient man ausschließlich über Befehle auf der Kommandozeile:
 
 ```git <kommando> <parameter>...```
 
@@ -97,8 +113,9 @@ Git selbst ist ein Kommandozeilenprogramm. Man bedient es über Befehle auf der 
 
 - Es gibt zahlreiche graphische Benutzeroberflächen.
 - Auf der Webseite von Git findet sich [eine Auswahl](https://git-scm.com/download/gui/windows).
-- Git für Windows kommt mit einer rudimentären GUI.
-- [TortoiseGit](https://tortoisegit.org/) bedient man über das Kontextmenü des Windows-Explorers
+- Git für Windows kommt mit einer enfachen GUI.
+- [TortoiseGit](https://tortoisegit.org/) integriert sich in den Windows-Explorer.
+- [GitHub Desktop](https://desktop.github.com) ist speziell für GitHub konzipiert. 
 
 
 
@@ -119,11 +136,35 @@ Git kommt mit einer vollwertigen Kommandozeilenumgebung.
 
 
 
+## Links
+
+- [Git Pro](https://git-scm.com/book/en/v2) ("offizielles" Buch, kostenlos)
+- [Version Control with Git](https://swcarpentry.github.io/git-novice/) (Software Carpentries)
+- [An Introduction to Version Control Using GitHub Desktop](https://programminghistorian.org/en/lessons/retired/getting-started-with-github-desktop)
+- [Einführung in Git](https://www.studon.fau.de/pg571251_2993840.html) (StudOn)
+- [Tutorials auf GitHub](http://try.github.io/)
+- [Git Crash-Kurs - Tobias Günther - Macoun 2011](https://www.youtube.com/watch?v=0Im_FrvLxXo) (Youtube)
+
+
+
+## Demo
+
+![Dateien in einem Repository-Verzeichnis](git_local_repo_listing.png)
+<!-- .element class="image-on-right" -->
+
+Diese Slides ...
+- auf dem lokalen Rechner
+- auf [GitLab des RRZE](https://gitos.rrze.fau.de/simnscho/git-github-gitlab-tutorial)
+- auf [GitHub](https://github.com/mnscholz/git-github-gitlab-tutorial)
+
+
+
 ## Verteiltes Arbeiten
 
 Die Stärke von Git ist das einfache verteilte Arbeiten an gemeinsam genutzten Dateien.
 
-Dazu wird das Repository an verschiedenen Orten vorgehalten (local und remote).
+Dazu wird das Repository an verschiedenen Orten vorgehalten.
+- *local* und *remote*
 
 Git managed die Synchronisation der Repositorykopien.
 
@@ -131,14 +172,21 @@ Git managed die Synchronisation der Repositorykopien.
 
 ## Verteilte Repositories
 
+![Verteilte Repository-Struktur mit local, remote und forked Repositories](git_local_remote_fork.png)
+<!-- .element class="image-on-right" -->
+
 Git kennt prinzipiell keine Hierarchie zwischen Repositories. In der Praxis hat sich folgender Aufbau bewährt:
 
 - Zentrales Haupt-Repository auf einem Server (GitHub, GitLab, ...).
-- Lokale Arbeitskopien des Repositories.
+- Lokale Arbeitskopien des Repositorys.
+- Bei komplexeren Projekten werden *Forks* als Zwischenstufen genutzt
 
 
 
 ## Eine lokale Arbeitskopie erzeugen
+
+![Beispiel, wo man die URL eines Repository findet](github_repo_url.png)
+<!-- .element class="image-on-right" -->
 
 Das Erzeugen einer Kopie nennt man *klonen*.
 
@@ -148,141 +196,95 @@ Man braucht dazu die URL des zentralen Repositorys.
 
 
 
-### Die URL des zentralen Repository
-
-![Beispiel, wo man die URL eines Repository findet](gitlab_git_tutorial_repo.png)
-
-
-
-### Einen Klon erzeugen (GUI)
-
-<div>
-![Klonen eines Repository in der GUI](git_gui_create_repo1.png)
-![Angabe des zu klonenden Repository](git_gui_clone_repo.png)
-</div>
-<!-- .element class="image-on-right" -->
-
-<div>
-Im Explorer außerhalb eines Repositorys die Git GUI aufrufen.
-
-Wenn `Clone Existing Repository` ausgewählt wird, erscheint ein Dialog zur Eingabe der Repository-URL.
-</div>
-<!-- .element class="content-on-left" -->
-
-
-
 ## Vor dem Arbeiten: Konfiguration
+
+![Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen](git_gui_settings.png)
+<!-- .element class="image-on-right" -->
 
 Git will mindestens Name und Mail-Adresse kennen, die es als Provenienzangaben benutzt.
 
 
 
-## Konfiguration (GUI)
+## Versionsverwaltung von Dateien
+
+- Ein Repository ist ein (normales) Verzeichnis.
+- Dateien und Verzeichnisse in einem Repository werden gemeinsam verwaltet.
+- Man kann entweder ein neues Verzeichnis als Repository erstellen oder ein bestehendes umwandeln.
+
+⚠ Im Repository legt Git ein Verzeichnis `.git` an, in dem es die Verwaltungsdaten ablegt. Dieses Verzeichnis **darf nicht** verändert oder gar gelöscht werden!
+
+
+
+## Versionen speichern und verwalten
+
+Ein *Commit*...
+- ist ein Schnappschuss des Repositorys zu einem Zeitpunkt,
+- sichert Zustand der Dateien und Verzeichnisse,
+- hat eine Log-Meldung,
+- hat einen oder mehrere chronologische Vorläufer und
+- ist durch einen Hashwert eindeutig identifiziert.
+
+⚠ Nur ein Commit hält Änderungen dauerhaft fest!
+
+
+
+## Versionsverwaltung:<br/> Schritte und Datenfluss in Git
+
+![Befehle und Datenfluss in Git](git_dataflow_commands.png)
+
+
+
+## Staging: Vorbereiten eines Commits
+
+- Git nimmt in ein Commit nur explizit genannte Dateien auf.
+- Mit dem Staging sagt man Git, dass es eine Datei für das nächste Commit *vormerken* soll.
+
+
+
+## Wozu Staging?
+
+**Saubere Commits!**
+
+- Jedes Commit sollte thematisch abgeschlossen sein.
+- Geänderte Dateien, die thematisch nicht zu einem Commit passen, werden ausgespart
+- Commits können von Git rückgängig gemacht werden
+
+
+
+## Varianten und Zweige
+
+Beziehungen zwischen Commits können nicht nur chronologische *Änderungen* darstellen, sondern auch
+  inhaltliche *Varianten*.
+
+Das Zusammenführen von Varianten wird *Merge* genannt.
+- meist kann Git automatisch Mergen
+- Konflikte müssen händisch aufgelöst werden
+
+
+
+## Zweige
 
 <div>
-![Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen](git_gui_settings.png)
+![Ein Netzwerk von Zweigen](kitodo_commits_graph.png)
+<span class="small">https://github.com/kitodo/kitodo-production/network</span>
 </div>
 <!-- .element class="image-on-right" -->
 
 <div>
-Unter `Edit > Options` finden sich die Einstellungen.
+Varianten werden durch Zweige, sogenannte *Branches*, realisiert.
 
-Git unterscheidet zwischen globalen und Repository-bezogenen Einstellungen.
+Zweige können abgespalten und wieder zusammengeführt (gemergt) werden.
+
+Dadurch entsteht eine graphartige Struktur.
 </div>
 <!-- .element class="content-on-left" -->
 
 
 
-## Konfiguration (Bash)
-
-`git config --global user.name <Name>` setzt den Namen.
-
-`git config --global user.email <Mail>` setzt die Mail-Adresse.
-
-Für Repository-bezogene Einstellungen lässt man `--global`weg.
-
-
-
-## Versionsverwaltung von Dateien
-
-- Die oberste Gliederungseinheit in Git ist ein Repository.
-- Ein Repository ist ein (normales) Verzeichnis.
-- Dateien und Verzeichnisse in einem Repository werden gemeinsam verwaltet.
-
-
-## Ein Repository anlegen
-
-- Man kann entweder ein neues Verzeichnis als Repository erstellen oder ein bestehendes umwandeln.
-- Im Repository legt Git ein Verzeichnis `.git` an, in dem es die Verwaltungsdaten ablegt. Dieses Verzeichnis sollte **nicht** verändert werden!
-
-
-
-### Ein Repository anlegen (GUI)
-
-<div>
-![Ein neues Repository kann über die Aktion "Create New Repository" erzeugt werden](git_gui_create_repo1.png)
-![Das Verzeichnis, in dem das Repository erzeugt werden soll, musss explizit angegeben werden](git_gui_create_repo2.png)
-</div>
-<!-- .element class="image-on-right" -->
-
-Beim Starten der GUI in einem Verzeichnis, das kein Repository ist, kann ein neues Repo erzeugt werden.
-
-Das Verzeichnis muss angegeben werden. Im Auswahldialog einfach "Ordner auswählen" drücken.
-
-
-
-### Ein Repository anlegen (Bash)
-
-In das entprechende Verzeichnis wechseln und mit 
-
-`git init` ein Repository anlegen.
-
-
-
-## Versionen erstellen und verwalten
-
-Ein *Commit*...
-- ist ein Schnappschuss eines Repositorys zu einem bestimmten Zeitpunkt,
-- erstellt und sichert die Version und Zustand der Dateien und Verzeichnisse,
-- hat eine Log-Meldung,
-- hat einen oder mehrere chronologische Vorläufer und
-- ist durch einen Hashwert eindeutig identifiziert.
-
-
-
-### Staging: Vorbereiten eines Commits
-
-- Git nimmt in ein Commit nur explizit genannte Dateien auf.
-- Mit dem Staging sagt man Git, dass es eine Datei für das nächste Commit vormerken soll.
-
-
-
-### Staging und Commit (GUI)
-
-<div>
-![Die für ein Commit wichtigen Elemente](git_gui_commit.png)
-</div>
-<!-- .element class="image-on-right" style="width: 50%;" -->
- 
-Die Listen rechts zeigen an, welche Dateien geändert wurden und welche davon vorgemerkt sind (rot und grün).
-
-Über `Stage changed` können alle geänderten Dateien vorgemerkt werden.
-
-Vor dem `Commit` muss eine Commit Message eingegeben werden (blau).
-
-
-
-### Staging und Commit (Bash)
-
-`git add <Datei oder Verzeichnis>` merkt Dateien oder komplette Verzeichnisse vor.
-`git add .` merkt alle Änderungen im aktuellen Verzeichnis und in Unterverzeichnissen vor.
-
-`git commit` erstellt ein Commit. In einem Editor muss man eine Commit-Meldung erstellen.
-Alternativ kann die Option `-m <Meldung>` benutzt werden.
-
-
-
 ## Versionshistorie
+
+![Das Fenster zur Ansicht der Versionshistorie mit vielen Einstellmöglichkeiten](git_gui_view_logs.png)
+<!-- .element class="image-on-right" -->
 
 Man kann in Git...
 - sich die Versionshistorie mit Meldungen und Änderungen anzeigen lassen und
@@ -292,81 +294,16 @@ Es gibt für Git verschiedenste Werkzeuge und Wege dafür.
 
 
 
-### Versionshistorie anschauen (GUI)
+## Beispiele auf GitHub ...
 
-<div>
-![Das Fenster zur Ansicht der Versionshistorie mit vielen Einstellmöglichkeiten](git_gui_view_logs.png)
-</div>
-<!-- .element class="image-on-right" -->
-
-Über `Repository > Visualize master's History` ist die Historie anzeigbar.
-
-Es gibt zahlreiche Einstellmöglichkeiten. Einfach ausprobieren, was nützt!
+- für ein Software-Projekt: [Kitodo.Production](https://github.com/kitodo/kitodo-production)
+- für eine Publikationsverwaltung: [Programming Historian](https://github.com/programminghistorian/jekyll)
 
 
 
-### Versionshistorie anschauen (Bash)
+<!-- .element class="aligned-center title-page" -->
+# Vielen Dank für die Aufmerksamkeit!
 
-`git log` zeigt eine Liste der letzten Commits mit Meldungen.
-
-`git diff` zeigt zeilenweise die Änderungen seit dem letzten Commit. 
-
-`git diff A..B [<Datei>]` zeigt die Änderungen zwischen Commit A und Commit B.
-
-`git diff A..HEAD` zeigt Änderungen zwischen A und dem letzten Commit.
-
-
-
-### Version auschecken (GUI)
-
-Unter `Branch > Checkout...` kann ein beliebiger Commit ausgewählt werden.
-
-
-
-### Version auschecken (Bash)
-
-`git checkout <Commit-Hash>` checkt die angegebene Version aus.
-
-
-
-## Varianten und Zweige
-
-Beziehungen zwischen Commits können nicht nur chronologische *Änderungen* darstellen, sondern auch
-  inhaltliche *Varianten*.
-
-
-
-## Zweige
-
-<div>
-![Ein Netzwerk von Zweigen](github_kitodo_commit_graph.png)
-<span class="small">https://github.com/kitodo/kitodo-production/network</span>
-</div>
-<!-- .element class="image-on-right" -->
-
-<div>
-Varianten werden durch Zweige, sogenannte *Branches*, realisiert.
-
-Zweige können abgespalten und wieder zusammengeführt werden.
-
-Dadurch entsteht eine graphartige Struktur.
-</div>
-<!-- .element class="content-on-left" -->
-
-
-
-### Einen Zweig erstellen (GUI)
-
-`Branch > Create...` erstellt einen neuen Zweig. Dieser muss und sollte einen sprechenden Namen bekommen.
-
-Git benennt den Hauptzweig standardmäßig `main`.
-
-
-
-### Einen Zweig erstellen (Bash)
-
-`git branch <Branch-Name>` erzeugt einen neuen Branch.
-
-
+Fragen?
 
 
