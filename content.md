@@ -101,9 +101,14 @@ Das RRZE betreibt GitLab für alle FAU-Angehörigen in [zwei Varianten](https://
 
 ## Benutzung
 
+![Die Kommandozeile Git Bash](git_bash.png)
+<!-- .element class="image-on-right" -->
+
 Git selbst bedient man ausschließlich über Befehle auf der Kommandozeile:
 
 ```git <kommando> <parameter>...```
+
+Git für Windows kommt mit einer vollwertigen Kommandozeilenumgebung.
 
 
 
@@ -117,23 +122,6 @@ Git selbst bedient man ausschließlich über Befehle auf der Kommandozeile:
 
 
 
-## Git GUI in Windows
-
-<div>
-![Git integriert sich in das Kontextmenü des Windows-Explorers](windows_context_menu2.png)
-![Die Kommandozeile Git Bash](git_bash.png)
-</div>
-<!-- .element class="image-on-left" -->
-
-<div>
-Git kommt mit einer vollwertigen Kommandozeilenumgebung.
-
-Über die Menüs der Git GUI sind die gängigsten Befehle verfügbar.
-</div>
-<!-- .element class="content-on-right" -->
-
-
-
 ## Links
 
 - [Git Pro](https://git-scm.com/book/en/v2) ("offizielles" Buch, kostenlos)
@@ -142,6 +130,8 @@ Git kommt mit einer vollwertigen Kommandozeilenumgebung.
 - [Einführung in Git](https://www.studon.fau.de/pg571251_2993840.html) (StudOn)
 - [Tutorials auf GitHub](http://try.github.io/)
 - [Git Crash-Kurs - Tobias Günther - Macoun 2011](https://www.youtube.com/watch?v=0Im_FrvLxXo) (Youtube)
+
+- [Anleitung SSH und Keys mit GitHub](https://docs.github.com/de/authentication/connecting-to-github-with-ssh) (analog für GitLab)
 
 
 
