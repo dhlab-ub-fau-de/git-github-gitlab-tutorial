@@ -1,5 +1,5 @@
 <!-- .element class="aligned-center title-page" -->
-# Revisionsverwaltung und <br/> Kollaboratives Arbeiten <br/> mit Git, GitLab und GitHub
+# Versionsverwaltung und <br/> Kollaboratives Arbeiten <br/> mit Git, GitLab und GitHub
 
 - - - - - - - - - - - - - - - - - - -
 
@@ -9,7 +9,7 @@ https://github.com/mnscholz/git-github-gitlab-tutorial
 
 ## Typische Probleme 
 
-- Dateiversionierung
+- Dateihistorie
 - Nachvollziehbarkeit von Änderungen
 
 ![inkonsistent benannte Dateien mit verschiedenen Versionen eines Dokuments](dateichaos.png)
