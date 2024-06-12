@@ -9,7 +9,7 @@ https://github.com/mnscholz/git-github-gitlab-tutorial
 
 ## Typische Probleme 
 
-- Dateihistorie
+- Dateiversionierung
 - Nachvollziehbarkeit von Änderungen
 
 ![inkonsistent benannte Dateien mit verschiedenen Versionen eines Dokuments](dateichaos.png)
