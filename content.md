@@ -21,7 +21,7 @@ https://github.com/mnscholz/git-github-gitlab-tutorial
 
 ## Git 
 
-[Git](http://git-scm.com/) ist das meist genutzte Source Code Management System <br/>
+[Git](http://git-scm.com/) ist das aktuell meist genutzte Source Code Management System <br/>
 unter anderem für Entwicklung von Linux, Windows, ...
 
 - Repository: zusammen verwaltete Dateien und Verzeichnisse
